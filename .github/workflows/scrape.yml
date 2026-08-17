@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run scraper
-        run: python scraper.py
+        run: python backend/scraper.py
 
       - name: Commit snapshot
         run: |
