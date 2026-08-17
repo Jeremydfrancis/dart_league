@@ -1,7 +1,8 @@
 from config import all_reports
 from parsers import parse_player_report, parse_team_report
 from merge import merge_players_and_teams
-
+import json
+from storage import save_snapshot
 
 def combine_all_player_reports():
     """Combines all the division reports of players into a single dictionary."""
@@ -25,7 +26,8 @@ def main():
     players = combine_all_player_reports()
     teams = combine_all_team_reports()
     combined = merge_players_and_teams(players, teams)
-    print(combined)
+    save_snapshot(combined)
+
 
 
 if __name__ == "__main__":
