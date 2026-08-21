@@ -22,7 +22,7 @@ jobs:
         run: pip install -r backend/requirements.txt
 
       - name: Change directory
-        run: cd backend
+        run: cd dart_league/backend
        
       - name: run scraper
         run: python scraper.py
