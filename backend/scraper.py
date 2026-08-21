@@ -1,6 +1,6 @@
-from backend.config import all_reports
-from backend.parsers import parse_player_report, parse_team_report
-from backend.merge import merge_players_and_teams
+from config import all_reports
+from parsers import parse_player_report, parse_team_report
+from merge import merge_players_and_teams
 from storage import save_snapshot
 
 def combine_all_player_reports():
