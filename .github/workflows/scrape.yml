@@ -21,8 +21,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r backend/requirements.txt
 
-      - name: Run scraper
-        run: python backend/scraper.py
+      - name: Change directory
+        run: cd backend
+       
+      - name: run scraper
+        run: python scraper.py
 
       - name: Commit snapshot
         run: |
